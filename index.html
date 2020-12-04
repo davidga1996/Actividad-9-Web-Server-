@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Agregar calificación alumno</title>
+        <style>
+            form {
+                margin: 10px;
+                padding: 5px;
+            }
+            form > .button {
+                justify-content: center;
+            }
+
+            form > .title {
+                text-align: center;
+                margin: 15px;
+                padding: 5px;
+            }
+            form > input {
+                margin: 7px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="/agregar" method="POST" id="agregar">
+            <label class="title">Agregar calificacion a alumno</label><br>
+            <label >Nombre Alumno: </label>
+            <input type="text" name="alumno" value="" required><br>
+            <label>Nombre Materia: </label>
+            <input type="text" name="materia" value="" required><br>
+            <label>calificacion: </label>
+            <input type="number" name="calificacion" value="" min="0" max="100" required><br>
+            <input type="submit" class="button" value="Enviar"><br><br><br>
+        </form>
+
+        <form action="/promedioAlumno" method="POST" id="promedioAlumno">
+            <label class="title">Promedio alumno</label><br>
+            <label>Nombre Alumno: </label>
+            <input type="string" name="alumno" value="" required><br>
+            <input type="submit" value="Buscar"><br><br><br>
+        </form>
+
+        <form action="/promedioMateria" method="POST" id="promedioMateria">
+            <label class="title">Promedio en materia</label><br>
+            <label>Nombre de materia: </label>
+            <input type="text" name="materia" value="" required><br>
+            <input type="submit" value="Buscar"> <br><br><br>
+        </form>
+    </body>
+</html>
